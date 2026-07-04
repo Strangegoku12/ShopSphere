@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "ShopSphereBackend.Controller.LoginUser",
+    "Method": "GetSignEmployees",
+    "RelativePath": "LoginUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopSphereBackend.Controller.LoginUser",
+    "Method": "PostEmployees",
+    "RelativePath": "LoginUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employees",
+        "Type": "ShopSphereBackend.Model.VendorModel.EmployeeSignup",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopSphereBackend.Controller.LoginUser",
+    "Method": "UpdateEmployee",
+    "RelativePath": "LoginUser/{EmployeeId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmployeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "employee",
+        "Type": "ShopSphereBackend.Model.VendorModel.EmployeeSignup",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopSphereBackend.Controller.LoginUser",
+    "Method": "DeleteEmployee",
+    "RelativePath": "LoginUser/{EmployeeId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmployeeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopSphereBackend.Controller.LoginUser",
+    "Method": "PostEmployees",
+    "RelativePath": "LoginUser/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
