@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "ShopSphereBackend.Controller.LoginUser",
+    "ContainingType": "ShopSphereBackend.Controller.signUpUser",
     "Method": "GetSignEmployees",
-    "RelativePath": "LoginUser",
+    "RelativePath": "signUpUser",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,9 +10,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ShopSphereBackend.Controller.LoginUser",
+    "ContainingType": "ShopSphereBackend.Controller.signUpUser",
     "Method": "PostEmployees",
-    "RelativePath": "LoginUser",
+    "RelativePath": "signUpUser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -26,9 +26,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ShopSphereBackend.Controller.LoginUser",
+    "ContainingType": "ShopSphereBackend.Controller.signUpUser",
     "Method": "UpdateEmployee",
-    "RelativePath": "LoginUser/{EmployeeId}",
+    "RelativePath": "signUpUser/{EmployeeId}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -47,9 +47,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ShopSphereBackend.Controller.LoginUser",
+    "ContainingType": "ShopSphereBackend.Controller.signUpUser",
     "Method": "DeleteEmployee",
-    "RelativePath": "LoginUser/{EmployeeId}",
+    "RelativePath": "signUpUser/{EmployeeId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -63,9 +63,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ShopSphereBackend.Controller.LoginUser",
+    "ContainingType": "ShopSphereBackend.Controller.signUpUser",
     "Method": "PostEmployees",
-    "RelativePath": "LoginUser/{id}",
+    "RelativePath": "signUpUser/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

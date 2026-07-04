@@ -5,10 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/LoginUser": {
+    "/signUpUser": {
       "get": {
         "tags": [
-          "LoginUser"
+          "signUpUser"
         ],
         "responses": {
           "200": {
@@ -18,7 +18,7 @@
       },
       "post": {
         "tags": [
-          "LoginUser"
+          "signUpUser"
         ],
         "requestBody": {
           "content": {
@@ -46,10 +46,10 @@
         }
       }
     },
-    "/LoginUser/{id}": {
+    "/signUpUser/{id}": {
       "get": {
         "tags": [
-          "LoginUser"
+          "signUpUser"
         ],
         "parameters": [
           {
@@ -69,10 +69,10 @@
         }
       }
     },
-    "/LoginUser/{EmployeeId}": {
+    "/signUpUser/{EmployeeId}": {
       "patch": {
         "tags": [
-          "LoginUser"
+          "signUpUser"
         ],
         "parameters": [
           {
@@ -112,7 +112,7 @@
       },
       "delete": {
         "tags": [
-          "LoginUser"
+          "signUpUser"
         ],
         "parameters": [
           {
@@ -200,7 +200,7 @@
   },
   "tags": [
     {
-      "name": "LoginUser"
+      "name": "signUpUser"
     }
   ]
 }
