@@ -7,11 +7,11 @@ namespace ShopSphereBackend.Controller
 {
     [ApiController]
     [Route("[controller]")]
-    public class LoginUser : ControllerBase
+    public class signUpUser : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public LoginUser(AppDbContext context)
+        public signUpUser(AppDbContext context)
         {
             _context = context;
         }
