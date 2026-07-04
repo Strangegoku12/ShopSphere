@@ -77,5 +77,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShopSphereBackend.Controller.signUpUser",
+    "Method": "Login",
+    "RelativePath": "signUpUser/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ShopSphereBackend.Model.VendorModel.LoginMdel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BCrypt.Net;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ShopSphereBackend.Data;
 using ShopSphereBackend.Model.VendorModel;
@@ -10,6 +11,7 @@ namespace ShopSphereBackend.Controller
     public class signUpUser : ControllerBase
     {
         private readonly AppDbContext _context;
+
 
         public signUpUser(AppDbContext context)
         {
@@ -31,7 +33,10 @@ namespace ShopSphereBackend.Controller
         [HttpPost]
         public async Task<IActionResult> PostEmployees(EmployeeSignup employees)
         {
+            employees.PasswordHash = BCrypt.Net.BCrypt.HashPassword(employees.PasswordHash);
+
             var saveemployees = await _context.EmployeeSignup.AddAsync(employees);
+
             await _context.SaveChangesAsync();
 
             return Ok(new
@@ -106,5 +111,39 @@ namespace ShopSphereBackend.Controller
                     Data = particularEmployee
                 });
             }
-        
-}}
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginMdel model)
+        {
+            var employee = await _context.EmployeeSignup
+                .FirstOrDefaultAsync(x => x.Email == model.Email);
+
+            if (employee == null)
+            {
+                return Unauthorized(new
+                {
+                    Message = "Invalid Email or Password"
+                });
+            }
+
+            bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(
+                model.Password,
+                employee.PasswordHash);
+
+            if (!isPasswordCorrect)
+            {
+                return Unauthorized(new
+                {
+                    Message = "Invalid Email or Password"
+                });
+            }
+
+            return Ok(new
+            {
+                Message = "Login Successful",
+                Employee = employee
+            });
+        }
+
+    }
+}
